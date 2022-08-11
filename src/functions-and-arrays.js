@@ -40,8 +40,24 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {
-  
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(mixedArr) {
+  let numbers = []
+  for (let i = 0; i < mixedArr.length; i++) {
+    if (typeof mixedArr[i] === 'number') {
+      numbers.push(mixedArr[i])
+    } else if (typeof mixedArr[i] === 'string') {
+      numbers.push(mixedArr[i].length)
+    } else if (typeof mixedArr[i] === 'boolean') {
+      if (mixedArr[i] === true) {
+        numbers.push(1)
+      }
+    } else {
+      throw new Error ("Unsupported data type sir or ma'am");
+    }
+  }
+  return sumNumbers(numbers)
 }
 
 
@@ -78,7 +94,13 @@ function averageWordLength(wordsArr) {
  }
 
 // Bonus - Iteration #4.1
-function avg() {}
+
+function avg(arr) {
+  if (arr.length == 0) {
+    return null
+  }
+  return sum(arr) / arr.length
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -174,7 +196,14 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  mult = 0
+  for (let i = 0; i < matrix[i]; i++) {
+    for (let j = 0; j < matrix[i][j]; j++) {
+      
+    }
+  }
+}
 
 
 
