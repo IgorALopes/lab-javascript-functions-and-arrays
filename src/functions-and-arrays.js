@@ -203,16 +203,17 @@ function greatestProduct(matrix) {
       mult = matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]
       if (mult > multMaior) {
         multMaior = mult
+        //console.log("Oi" + multMaior)
       } 
       //console.log(matrix[j][i])
     }
     //console.log(multMaior)
   }
+  //console.log(multMaior)
   return multMaior
 }
 
-
-
+greatestProduct(matrix)
 
 
 
