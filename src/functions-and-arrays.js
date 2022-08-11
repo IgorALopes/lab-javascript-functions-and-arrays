@@ -40,7 +40,9 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum() {
+  
+}
 
 
 
@@ -93,8 +95,17 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {
-  
+function uniquifyArray(wordsUnique) {
+  if (wordsUnique.length == 0) {
+    return null
+  }
+  let newUniqueArray = []
+  for (let i = 0; i < wordsUnique.length; i++) {
+    if (!newUniqueArray.includes(wordsUnique[i])) {
+      newUniqueArray.push(wordsUnique[i])
+    }
+  }
+  return newUniqueArray
 }
 
 
@@ -102,7 +113,12 @@ function uniquifyArray() {
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, wordSearch) {
+  if (wordsFind.length == 0) {
+    return null
+  }
+  return wordsFind.includes(wordSearch)
+}
 
 
 
@@ -121,7 +137,16 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+
+function howManyTimes(wordsCount, numWord) {
+  let count = 0
+  for (let i = 0; i < wordsCount.length; i++) {
+    if (wordsCount[i] === numWord) {
+      count++
+    }
+  }
+  return count
+}
 
 
 
