@@ -197,20 +197,28 @@ const matrix = [
 ];
 
 function greatestProduct(matrix) {
-  mult = 0
-  for (let i = 0; i < matrix[i]; i++) {
-    for (let j = 0; j < matrix[i][j]; j++) {
-      
+  multMaior = 0
+  for (let j = 0; j < matrix.length; j++) {
+    for (let i = 0; i < matrix[0].length; i++) {
+      mult = matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]
+      if (mult > multMaior) {
+        multMaior = mult
+      } 
+      //console.log(matrix[j][i])
     }
+    //console.log(multMaior)
   }
+  return multMaior
 }
+
+
 
 
 
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
-if (typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
   module.exports = {
     maxOfTwoNumbers,
     findLongestWord,
@@ -222,6 +230,6 @@ if (typeof module !== 'undefined') {
     uniquifyArray,
     doesWordExist,
     howManyTimes,
-    greatestProduct
+    greatestProduct,
   };
 }
