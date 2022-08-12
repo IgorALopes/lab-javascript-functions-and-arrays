@@ -205,10 +205,10 @@ function greatestProduct(matrix) {
         continue
       }
       mult = matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]
-      console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
+      //console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
       if (mult > multMaior) {
         multMaior = mult
-        console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
+        //console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
       }     
     }  
   }
@@ -221,10 +221,10 @@ function greatestProduct(matrix) {
         continue
       }
       mult = matrix[j][i] * matrix[j+1][i] * matrix[j+2][i] * matrix[j+3][i]
-      console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
+      //console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
       if (mult > multMaior) {
         multMaior = mult
-        console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
+        //console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
       }
     }
   }
