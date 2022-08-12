@@ -198,18 +198,36 @@ const matrix = [
 
 function greatestProduct(matrix) {
   multMaior = 0
+  //Leitura Horizontal
   for (let j = 0; j < matrix.length; j++) {
     for (let i = 0; i < matrix[0].length; i++) {
+      if (matrix[j][i+3] == undefined) {
+        continue
+      }
       mult = matrix[j][i] * matrix[j][i+1] * matrix[j][i+2] * matrix[j][i+3]
+      console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
       if (mult > multMaior) {
         multMaior = mult
-        //console.log("Oi" + multMaior)
-      } 
-      //console.log(matrix[j][i])
-    }
-    //console.log(multMaior)
+        console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j][i+1]}, ${matrix[j][i+2]}, ${matrix[j][i+3]}`)
+      }     
+    }  
   }
-  //console.log(multMaior)
+  //Leitura Vertical
+  Loop1:
+  for (let j = 0; j < matrix.length; j++) {
+    Loop2:
+    for (let i = 0; i < matrix[0].length; i++) {
+      if (matrix[j+3] == undefined) {
+        continue
+      }
+      mult = matrix[j][i] * matrix[j+1][i] * matrix[j+2][i] * matrix[j+3][i]
+      console.log(`${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
+      if (mult > multMaior) {
+        multMaior = mult
+        console.log(`MAIOR ${multMaior}, ${matrix[j][i]}, ${matrix[j+1][i]}, ${matrix[j+2][i]}, ${matrix[j+3][i]}`)
+      }
+    }
+  }
   return multMaior
 }
 
