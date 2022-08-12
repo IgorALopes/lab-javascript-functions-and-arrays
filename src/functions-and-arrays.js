@@ -228,6 +228,7 @@ function greatestProduct(matrix) {
       }
     }
   }
+  //console.log(multMaior)
   return multMaior
 }
 
